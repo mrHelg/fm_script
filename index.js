@@ -1,6 +1,11 @@
-let messUser = 'Маша говорит:\u2721\n\t\'Привет\'!!!';
+let a = 1;
 
-console.log(messUser);
+let b = 2;
 
+let c = --a  +  ++b;
+
+console.log('c = ', c);
+console.log('a = ', a);
+console.log('b = ', b);
 
 
