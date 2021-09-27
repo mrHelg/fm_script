@@ -1,11 +1,11 @@
-let a = 1;
+//let number = 10;
 
-let b = 2;
+//console.log(+number);
 
-let c = --a  +  ++b;
-
-console.log('c = ', c);
-console.log('a = ', a);
-console.log('b = ', b);
-
+// false
+// 0  -0
+// ''
+// NaN
+// null
+// undefined
 
