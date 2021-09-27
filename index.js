@@ -1,25 +1,39 @@
-/* логическое сложение  ИЛИ  || */
-/*возвращает первую правду или последнюю ложь*/
-/*1+0=1  1+1=2  0+1=1  0+0=0*/
+let number = 77;
 
-/* логическое умножение  И  && */
-/*возвращает последнюю правду или первую ложь*/
-/*1*0=0   0*1=0  0*0=0    1*1=1*/
+//number = number + 10;
+
+number += 10;
+
+number %= 5;
+
+number **=3;
+
+number /= number;
+
+number *=4;
+
+number = (number-2) * 4;
+
+console.log(number);
 
 
-// let cond = true && 12;
-// console.log(cond);
 
 
-let number =100;
+let nameUser = 'Elon';
+nameUser = (nameUser +  ' Musk') *2;
+//nameUser += ' Musk'*2 ;
+console.log(number, nameUser);
 
-let min = 10;
-let max = 20;
 
-/* написать You win! если число не попало в диапазон (не используя логическое отрицание) */
 
-if( number<min  || number>max ){
-  console.log('You win!', number)
-} 
+//let a=2,b,c,res; bad practice
+
+
+let a = 2;
+let b;
+let c;
+let res;
+
+
 
 
