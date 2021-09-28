@@ -1,19 +1,39 @@
-//alert('I\'m a teacher');
+// myFirstFunction();
+// function myFirstFunction(){
+//   console.log('text in function')
+// }
+// myFirstFunction();
 
-let userInput = prompt('Enter number: ');
-//string || null
+// //mySecondFunction(); //error!
+// const mySecondFunction = function (){ //function expression
+//   console.log('text in function 2')
+// }
 
-//пустая строка
-//null 
-//то, что нельзя привести к числу
+// //mySecondFunction = 5;//error
 
-let isNotNumber = userInput==='' || userInput===null || isNaN(Number(userInput));
+// mySecondFunction();
 
-if( isNotNumber ){
-  console.log('error');
-}else{
-  console.log('well done');
+// console.log(mySecondFunction);
+// console.log(myFirstFunction);
+
+
+const getSumTwoNums = function (){
+  let userInput1 = prompt('enter first number');
+  let userInput2 = prompt('enter second number');
+
+  let checkEmpty = userInput1==='' || userInput1===null || userInput2==='' || userInput2===null;
+
+  let sum = Number(userInput1) + Number(userInput2);
+
+  if(checkEmpty || isNaN(sum)){
+    console.log('error');
+  }else{
+    console.log(userInput1,'+',userInput2,'=',sum);
+  }
 }
+
+getSumTwoNums();
+
 
 
 
