@@ -1,102 +1,43 @@
-// myFirstFunction();
-// function myFirstFunction(){
-//   console.log('text in function')
-// }
-// myFirstFunction();
 
-// //mySecondFunction(); //error!
-// const mySecondFunction = function (){ //function expression
-//   console.log('text in function 2')
-// }
-
-// //mySecondFunction = 5;//error
-
-// mySecondFunction();
-
-// console.log(mySecondFunction);
-// console.log(myFirstFunction);
-
-// let userInput1 = prompt('enter first number');
-// let userInput2 = prompt('enter second number');
-
-// let checkEmpty = userInput1==='' || userInput1===null || userInput2==='' || userInput2===null;
-// sum;
-
-// /**
-//  * 
-//  * @param {string} value 
-//  * @returns {boolean}
-//  */
-// const isNotNumber = function(value){
-//   return value==='' || value===null || isNaN(Number(value));
-// }
-// /**
-//  * 
-//  * @param {any} num1 
-//  * @param {any} num2 
-//  * @returns { boolean | number }
-//  */
-// const getSumTwoNums = function (num1, num2){
-//   if(isNotNumber(num1) || isNotNumber(num2)){
-//     return false;
-//   }
-//   return Number(num1)+Number(num2);
-// }
-
-// let userInput1 = prompt('enter first number');
-// let userInput2 = prompt('enter second number');
-
-// let result = getSumTwoNums(userInput1, userInput2);
-// if(result===false){
-//   console.log('error');
-// }else{
-//   console.log(result);
-// }
-
-
-
-
-
-
-
-// /**
-//  * returns the maximum value of two if they are of the same type
-//  * @param {any} val1 
-//  * @param {any} val2 
-//  * @returns {any | null}
-//  */
-// const retMaxValOfTwo = function(val1, val2){
-//   if(typeof val1 === typeof val2){
-//     if(val1>val2){
-//       return val1;
-//     }else{
-//       return val2;
-//     }
-//   }
-//   return null;
-// }
-
-// console.log(retMaxValOfTwo('102', '12')); //'12'
-// console.log(retMaxValOfTwo(12, undefined)); //null
-// console.log(retMaxValOfTwo(12, 102)); //45
-// console.log(retMaxValOfTwo(12, 12)); //12
-// console.log(retMaxValOfTwo('q', 'a')); //'q'
-// console.log(retMaxValOfTwo(true, false));
-
-const convertNum = function(val){
-  if(isNaN(Number(val)) ||val===''||val==null ){
+let sideSquare = 10;//prompt('Enter side square', '10');
+//debugger;
+/**
+ * 
+ * @param {number} side 
+ * @returns {number | null}
+ */
+const getPerimetrSquare = function(side){
+  if(isNaN(side)){
     return null;
   }
-  return Number(val);
+  return 4*side;
 }
-const isEven = function(val){
-  if(typeof val === 'number'){
-      return val%2 === 0; 
+
+const convertNumber = function(value){//'123'
+  if(value==='' || value===null || isNaN(Number(value))){
+    return NaN;
   }
-  return null;
+  return Number(value);//123
 }
 
-console.log(isEven(convertNum(prompt())));
-console.log(isEven(13));
-console.log(isEven('qwe'));
+console.log(getPerimetrSquare(553));
+let changeSideSquare = convertNumber(sideSquare);
+console.log(getPerimetrSquare(changeSideSquare));
 
+
+/*
+Написать функцию, которая проверяет возраст пользователя на совершеннолетие
+*/
+
+
+
+const isAdult = function(age, AGE_ADULT=18){
+  return age>=AGE_ADULT;
+}
+
+const AGE_ADULT = 21;
+
+console.log(isAdult(20, AGE_ADULT));//true
+console.log(isAdult(2));//false
+console.log(isAdult(18));//true
+console.log(isAdult(17));//false
