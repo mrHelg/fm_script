@@ -1,43 +1,52 @@
-
-let sideSquare = 10;//prompt('Enter side square', '10');
-//debugger;
-/**
- * 
- * @param {number} side 
- * @returns {number | null}
- */
-const getPerimetrSquare = function(side){
-  if(isNaN(side)){
-    return null;
-  }
-  return 4*side;
+const logWord = function(word='hi', sign='!'){
+  console.log(word+sign);
 }
 
-const convertNumber = function(value){//'123'
-  if(value==='' || value===null || isNaN(Number(value))){
-    return NaN;
-  }
-  return Number(value);//123
-}
 
-console.log(getPerimetrSquare(553));
-let changeSideSquare = convertNumber(sideSquare);
-console.log(getPerimetrSquare(changeSideSquare));
-
-
-/*
-Написать функцию, которая проверяет возраст пользователя на совершеннолетие
-*/
+// logWord();
+// logWord('Elon Musk');
+// logWord(undefined,'?');
+// logWord('hi','?');
+// logWord(null,'?');
 
 
 
-const isAdult = function(age, AGE_ADULT=18){
-  return age>=AGE_ADULT;
-}
+// const checkCondition = function(num){
+//   return num>20 && num%7===0;
+// }
+// if(checkCondition(prompt('Enter number'))){
+//   alert('WIN!')
+// }
 
-const AGE_ADULT = 21;
+// /**
+//  * 
+//  * @param {number} a 
+//  * @param {number} b 
+//  * @param {number} c 
+//  * @returns { null | number[] }
+//  */
+// const solveSquareEquation = function(a=1,b=1,c=1){
+//   const D = b*b-4*a*c;
+//   if(D<0){
+//     return null;
+//   }
+//   if(D===0){
+//     const x = -b / (2*a);
+//     return [x, x];
+//   }
+//   const x1 = (-b + D**0.5) / (2*a);
+//   const x2 = (-b - D**0.5) / (2*a);
+//   return [x1, x2];
+// }
 
-console.log(isAdult(20, AGE_ADULT));//true
-console.log(isAdult(2));//false
-console.log(isAdult(18));//true
-console.log(isAdult(17));//false
+// console.log(solveSquareEquation(-1,-2,15));
+// console.log(solveSquareEquation(1,12,36));
+// console.log(solveSquareEquation(5,3,7));
+
+
+
+
+
+// console.log(solveSquareEquation());
+
+// console.log(solveSquareEquation(undefined, undefined, 200));
