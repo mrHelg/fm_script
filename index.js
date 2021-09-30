@@ -1,35 +1,48 @@
-// const age = +prompt('enter age');
-
-// if(isNaN(age)){
-//   console.log('invalid age')
-// }else if(age <6 ){
-//   console.log('child')
-// }else if(age <18 ){
-//   console.log('puple')
-// }else if(age <75 ){
-//   console.log('adult')
-// }else {
-//   console.log('oldmen')
-// }
-
-/*
-человек вводит номер месяца, 
-а мы выводим время года
-1,2,12 - winter
-3,4,5 - spring
-6,7,8 - summer
-9,10,11 - fall
-invalid data
-*/
-
-const foo = prompt('enter age');
-switch (foo) {
-  case '0':
-  case '1':
-  case '2':
-  case '3':
-      alert('yes');
-      break;
-  default:
-      alert('not');
+const sum = function(a,b){
+  return a+b;
 }
+const sub = function(a,b){
+  return a-b;
+}
+const mult = function(a,b){
+  return a*b;
+}
+const div = function(a,b){
+  return a/b;
+}
+const rem = function(a,b){
+  return a%b;
+}
+
+//console.log(typeof sum);
+
+const calculate = function(num1=10, num2=2, operator='+'){
+  if( isNaN(num1-num2) ){
+    return false;
+  }
+  let f = null;
+  switch (operator) {
+    case '+':
+      f = sum;
+      break;
+    case '-':
+      f = sub;
+      break;
+    case '*':
+      f = mult;
+      break;
+    case '/':
+      f = div;
+      break;
+    case '%':
+      f = rem;
+      break;      
+  }
+  return (typeof f==='function')?f(num1,num2):f;
+}
+
+console.log(calculate(4,5,'^'));
+// const userNumber1 = prompt('Enter first number');
+// const userNumber2 = prompt('Enter second number');
+// const userOperator = prompt('Enter operator');
+// console.log(calculate(userNumber1, userNumber2, userOperator));
