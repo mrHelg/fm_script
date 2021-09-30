@@ -1,39 +1,35 @@
-const lang = prompt('Choose language:\n1 - ua\n2 - ru\n3 - it\n4 - en');
+// const age = +prompt('enter age');
 
-// if(lang==='1'){
-//   console.log('Добрий день')
-// }else if(lang==='2'){
-//   console.log('Добрый день')
-// }else if(lang==='3'){
-//   console.log('Buon')
-// }else if(lang==='4'){
-//   console.log('Good day')
+// if(isNaN(age)){
+//   console.log('invalid age')
+// }else if(age <6 ){
+//   console.log('child')
+// }else if(age <18 ){
+//   console.log('puple')
+// }else if(age <75 ){
+//   console.log('adult')
 // }else {
-//   console.log('invalid input')
+//   console.log('oldmen')
 // }
 
-switch (lang) {
-  case '1':
-  case 'ua':
-    console.log('Добрий день');
-    break;
-  case '2':
-  case 'ru': 
-  case 'RU': 
-  case 'русский':
-    console.log('Добрый день');
-    break;
-  case '3':
-  case 'it':
-    console.log('Buon');
-    break;
-  case '4':
-  case 'en':
-    console.log('Good day');
-    break;
-  default:
-    console.log('invalid input');
-    break;
-}
+/*
+человек вводит номер месяца, 
+а мы выводим время года
+1,2,12 - winter
+3,4,5 - spring
+6,7,8 - summer
+9,10,11 - fall
+invalid data
+*/
 
-//console.log('Thanks');
+const foo = prompt('enter age');
+switch (foo) {
+  case '0':
+  case '1':
+  case '2':
+  case '3':
+      alert('yes');
+      break;
+  default:
+      alert('not');
+}
