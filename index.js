@@ -1,52 +1,15 @@
-const logWord = function(word='hi', sign='!'){
-  console.log(word+sign);
+// const isAdult = function(age){
+//   return age>=18 ? 'adult' : 'not adult';
+// }
+
+// console.log(isAdult(150))
+
+
+const logIsAdult = function(age){
+  const adult = age>=18 ? 'adult' : 'not adult';
+  console.log(adult)
 }
 
-
-// logWord();
-// logWord('Elon Musk');
-// logWord(undefined,'?');
-// logWord('hi','?');
-// logWord(null,'?');
+logIsAdult(15);
 
 
-
-// const checkCondition = function(num){
-//   return num>20 && num%7===0;
-// }
-// if(checkCondition(prompt('Enter number'))){
-//   alert('WIN!')
-// }
-
-// /**
-//  * 
-//  * @param {number} a 
-//  * @param {number} b 
-//  * @param {number} c 
-//  * @returns { null | number[] }
-//  */
-// const solveSquareEquation = function(a=1,b=1,c=1){
-//   const D = b*b-4*a*c;
-//   if(D<0){
-//     return null;
-//   }
-//   if(D===0){
-//     const x = -b / (2*a);
-//     return [x, x];
-//   }
-//   const x1 = (-b + D**0.5) / (2*a);
-//   const x2 = (-b - D**0.5) / (2*a);
-//   return [x1, x2];
-// }
-
-// console.log(solveSquareEquation(-1,-2,15));
-// console.log(solveSquareEquation(1,12,36));
-// console.log(solveSquareEquation(5,3,7));
-
-
-
-
-
-// console.log(solveSquareEquation());
-
-// console.log(solveSquareEquation(undefined, undefined, 200));
