@@ -1,22 +1,12 @@
-/*
-Запрашивать у пользователя пароль до тех пор, 
-пока он не введет правильный.
-Ограничиваем количество попыток.
-*/
 debugger;
-let count = MAX_COUNT_TRY;
-while(true){
-  const password = prompt('Enter password');
-  count--;
+for(let i=0; i<MAX_COUNT_TRY; i++){
+  console.log(i);
+  const password = prompt('enter');
   if(password===GOOD_PASSWORD){
     alert('Thanks');
     break;
   }
-  if(count===0){
-    alert('try is over');
-    break;
+  if(i+1===MAX_COUNT_TRY){
+    alert('try over');
   }
-  alert('count try = '+ count);
 }
-
-
