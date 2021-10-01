@@ -1,12 +1,19 @@
-debugger;
-for(let i=0; i<MAX_COUNT_TRY; i++){
-  console.log(i);
-  const password = prompt('enter');
-  if(password===GOOD_PASSWORD){
-    alert('Thanks');
-    break;
+const calcFactorial = function(number=2){
+  if(number<0){
+    return null;
   }
-  if(i+1===MAX_COUNT_TRY){
-    alert('try over');
+  if(number===0 || number===1){
+    return 1;
   }
+  if(number>MAX_FACTORIAL){
+    return false;
+  }
+  let result = 1n;
+  for(let i=1; i<=number; i++){
+    result *= BigInt(i);
+  }
+  return result;
 }
+
+console.log(calcFactorial(77));//6
+
