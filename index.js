@@ -1,25 +1,21 @@
-const cat = {
-  name:'Muha',
-  isMale: false,
-  color: 'grey',
-  breed: 'yard',
-  age: 2,
-  isSlipping: true,
-  say:function(){
+  
+function Cat(name='test', isMale=true, color='grey', breed='pers', age=0){
+  this.name = name;
+  this.isMale = isMale;
+  this.color = color;
+  this.breed = breed;
+  this.age = age;
+  this.say = function(){
     return 'meow';
-  },
-  run:function(){},
-};
+  };
+}
 
-cat.age++;
-console.log(cat.say());
-cat.countLegs = 4;
-console.log(cat);
-console.log(cat.name);
-console.log(cat.isMale);
-console.log(cat.age);
+const catTest = new Cat();
+const catMuha = new Cat('Muha',false,'grey','yard',2);
+const kitty = new Cat('Kitty',false,'white','yard',1);
+const catPushok = new Cat('Pushok',true,'black','pers',4);
+console.log(catPushok.name+' says '+catPushok.say());
 
-delete cat.isSlipping;
-console.log(cat);
+
 
 
