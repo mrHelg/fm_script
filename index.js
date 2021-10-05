@@ -1,40 +1,44 @@
 'use strict';
-
-function Auto(name, maxSpeed){
-  this.name = name;
-  this.maxSpeed = maxSpeed;
-  this.speed = 0;
-
-  this.accelerate = function(value){
-    if(value<0){
-      return false;
+const showRange = function(max=50, min=20, num=3){
+  for (let i = max; i >=min; i--) {
+    if(i%num===0){
+      console.log(i);
     }
-    this.speed += value;
-    if(this.speed>this.maxSpeed){
-      return (this.speed = this.maxSpeed);
-    } 
-    return this.speed;
-  };
-  this.deaccelerate = function(value){
-    if(value<0 || this.speed<value){
-      return false;
+  }
+}
+showRange();
+
+
+
+
+
+const checkMath = function(num1=5, num2=4, operator='*'){
+  let result=null;
+  switch(operator){
+    case '*':
+      result=num1*num2;
+      break;
+    case '/':
+      result=num1/num2;
+      break;
+    case '+':
+      result=num1+num2;
+      break;
+    case '-':
+      result=num1-num2;
+      break;
+    default:
+      result=null;
+      break;
+  }
+  if(result===null || isNaN(result)){
+    return 'error'
+  }
+  while(true){
+    const quetion = prompt(num1+operator+num2);//string
+    if(Number(quetion)===result){
+      return 'WIN!'
     }
-    this.speed -= value;
-    if(this.speed<0){
-      return (this.speed=0);
-    } 
-    return this.speed;
-  };
-  this.stop = function(){
-    return (this.speed=0);
-  };
-};
-
-const car = new Auto('bmw', 250);
-
-
-
-
-
-
-
+  }
+}
+console.log(checkMath(20,10,'/'));
