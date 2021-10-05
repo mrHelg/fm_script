@@ -1,20 +1,16 @@
-const user = {
-  firstName: 'Elon',
-  lastName: 'Musk',
-  age: 50, 
-  isMale: true,
-}
 
-const sayHello = function(obj){
-  return `Hello, ${obj.firstName} ${obj.lastName}!`;
-}
+const obj = {
+  name:'pen',
+  'is writen': true,
+  11:78,
+};
 
-console.log(sayHello(user));//Hello, Elon Musk!
+const nameProperty = 'is writen';
+console.log(obj[11]);
+console.log(obj['11'], obj['11']);
+console.log(obj['is writen']);
+console.log(obj['name']);
+console.log(obj[nameProperty]);
 
-const user2 = {
-  firstName: 'Tim',
-  lastName: 'Li',
-  age: 15, 
-  isMale: true,
-}
-console.log(sayHello(user2));//Hello, Elon Musk!
+
+
