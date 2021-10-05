@@ -1,44 +1,20 @@
-'use strict';
-const showRange = function(max=50, min=20, num=3){
-  for (let i = max; i >=min; i--) {
-    if(i%num===0){
-      console.log(i);
-    }
-  }
+const user = {
+  firstName: 'Elon',
+  lastName: 'Musk',
+  age: 50, 
+  isMale: true,
 }
-showRange();
 
-
-
-
-
-const checkMath = function(num1=5, num2=4, operator='*'){
-  let result=null;
-  switch(operator){
-    case '*':
-      result=num1*num2;
-      break;
-    case '/':
-      result=num1/num2;
-      break;
-    case '+':
-      result=num1+num2;
-      break;
-    case '-':
-      result=num1-num2;
-      break;
-    default:
-      result=null;
-      break;
-  }
-  if(result===null || isNaN(result)){
-    return 'error'
-  }
-  while(true){
-    const quetion = prompt(num1+operator+num2);//string
-    if(Number(quetion)===result){
-      return 'WIN!'
-    }
-  }
+const sayHello = function(obj){
+  return `Hello, ${obj.firstName} ${obj.lastName}!`;
 }
-console.log(checkMath(20,10,'/'));
+
+console.log(sayHello(user));//Hello, Elon Musk!
+
+const user2 = {
+  firstName: 'Tim',
+  lastName: 'Li',
+  age: 15, 
+  isMale: true,
+}
+console.log(sayHello(user2));//Hello, Elon Musk!
