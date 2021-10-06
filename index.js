@@ -1,18 +1,22 @@
-
-function MyArray(){
-  this.length = 0;
-
+/* logic */
+function MyArrayProto(){
   this.push = function(item){
-    this[this.length] = item;
-    this.length++;
-    return this.length;
+      this[this.length] = item;
+      //this.length++;
+      return ++this.length;
   }
 }
+/* data */
+function MyArray(){
+  this.length = 0;
+}
+/* Prototype */
+MyArray.prototype = new MyArrayProto();
 
 const myArray = new MyArray();
 const myArray2 = new MyArray();
 //console.log(myArray);
-console.log(myArray.push===myArray2.push);//false
+console.log(myArray.push===myArray2.push);//true
 
 
 
