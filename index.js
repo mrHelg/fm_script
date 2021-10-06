@@ -1,13 +1,22 @@
 
-const t1 = 1;
-const t2 = 1;
-
 const obj1 = {};
-const obj2 = {};
+const obj2 = Object();
+const obj3 = new Object();
 
-const link = obj1;//копирование по ссылке
+console.log(obj1);
+console.log(obj2);
+console.log(obj3);
 
-console.log(obj1===link);//true
-console.log(obj2===link);//false
+function MyObj(){
+  //new - создает пустой объект для функции конструктора
+  //новый объект - this
+  if(!new.target){
+    return new MyObj();
+  }
+}
 
-link.prop2 = 44;
+const myObj = MyObj();
+console.log(myObj);
+
+const myObj2 = new MyObj();
+console.log(myObj2);
