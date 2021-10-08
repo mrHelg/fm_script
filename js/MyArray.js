@@ -42,6 +42,15 @@ function MyArrayProto(){
     }
     return true;
   }
+  this.filter = function(func){
+    const result = new MyArray();
+    for(let i=0; i<this.length; i++){
+      if(func(this[i])){
+        result.push(this[i]);
+      }
+    }
+    return result;
+  }
 }
 
 
@@ -51,9 +60,12 @@ function isEven(n){
 function isOdd(n){
   return n%2===1; 
 }
+function bigTen(n){
+  return n>10;
+}
 
 /* Prototype */
 MyArray.prototype = new MyArrayProto();
 
-const myArray = new MyArray(1,1,7,15,5);
-console.log(myArray.every(isOdd));
+const myArray = new MyArray(1,4,7,14,5,45,7,88);
+console.log(myArray.filter(bigTen));
