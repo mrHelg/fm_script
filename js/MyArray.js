@@ -1,3 +1,10 @@
+/* data */
+function MyArray(){
+  this.length = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    this.push(arguments[i]);
+  }
+}
 /* logic */
 function MyArrayProto(){
   this.push = function(){ //1,2,3,4,5,8
@@ -14,14 +21,13 @@ function MyArrayProto(){
     delete this[this.length];
     return item;
   }
-}
-/* data */
-function MyArray(){
-  this.length = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    this.push(arguments[i]);
+  this.forEach = function(func){
+    for(let i=0; i<this.length;i++){
+      func(this[i]);
+    }
   }
 }
+
 /* Prototype */
 MyArray.prototype = new MyArrayProto();
 
