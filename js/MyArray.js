@@ -26,13 +26,23 @@ function MyArrayProto(){
       func(this[i]);
     }
   }
+  this.some = function(func){
+    debugger;
+    for(let i=0; i<this.length; i++){
+      if(func(this[i])){
+        return true;
+      }
+    }
+    return false;
+  }
 }
 
 /* Prototype */
 MyArray.prototype = new MyArrayProto();
 
 
-const myArray = new MyArray(1,1,1,15,5);
-myArray.push(2,2,2);
-myArray.pop();
+const myArray = new MyArray(1,1,2,15,5);
+// myArray.push(2,2,2);
+// myArray.pop();
+//myArray.forEach(square);
 console.log(myArray);
