@@ -27,7 +27,6 @@ function MyArrayProto(){
     }
   }
   this.some = function(func){
-    debugger;
     for(let i=0; i<this.length; i++){
       if(func(this[i])){
         return true;
@@ -35,14 +34,26 @@ function MyArrayProto(){
     }
     return false;
   }
+  this.every = function(func){
+    for(let i=0; i<this.length; i++){
+      if(func(this[i])===false){
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+
+function isEven(n){
+  return n%2===0;
+}
+function isOdd(n){
+  return n%2===1; 
 }
 
 /* Prototype */
 MyArray.prototype = new MyArrayProto();
 
-
-const myArray = new MyArray(1,1,2,15,5);
-// myArray.push(2,2,2);
-// myArray.pop();
-//myArray.forEach(square);
-console.log(myArray);
+const myArray = new MyArray(1,1,7,15,5);
+console.log(myArray.every(isOdd));
