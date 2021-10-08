@@ -54,16 +54,6 @@ function MyArrayProto(){
 }
 
 
-function isEven(n){
-  return n%2===0;
-}
-function isOdd(n){
-  return n%2===1; 
-}
-function bigTen(n){
-  return n>10;
-}
-
 /* Prototype */
 MyArray.prototype = new MyArrayProto();
 
