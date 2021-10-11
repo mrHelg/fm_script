@@ -10,7 +10,10 @@ const site = {
   headers:['Header1','Test','Header3','New article'],
   showHeaders(){
     //contecst
-    this.headers.forEach(logItem.bind(this));
+    this.headers.forEach((header, index)=>{
+      console.log(this.title);
+      console.log(`${index+1}: ${header}`);
+    });
   }
 };
 
