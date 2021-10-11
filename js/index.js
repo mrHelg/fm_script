@@ -1,24 +1,16 @@
 'use strict';
 
-//декларация
-function test1(){
-  console.log(this)
-}
+const site = {
+  title:'Green site',
+  headers:['Header1','Test','Header3','New article'],
+  showHeaders(){
+    //contecst
+    const self = this;
+    this.headers.forEach(function(header, index){
+      console.log(self.title)
+      console.log(`${index+1}: ${header}`);
+    });
+  }
+};
 
-//выражение
-const test2 = function(){
-  console.log(this)
-}
-
-//стрелка
-const test3 = ()=>{
-  console.log(this)
-}
-
-test1();
-test2();
-test3();
-
-
-
-
+site.showHeaders();
