@@ -1,20 +1,16 @@
 'use strict';
 
-function logItem(header, index){
-  console.log(this.title);
-  console.log(`${index+1}: ${header}`);
+const t1 = function(...qq){
+  console.log(arguments)
+  console.log(qq)
 }
 
-const site = {
-  title:'Green site',
-  headers:['Header1','Test','Header3','New article'],
-  showHeaders(){
-    //contecst
-    this.headers.forEach((header, index)=>{
-      console.log(this.title);
-      console.log(`${index+1}: ${header}`);
-    });
-  }
-};
+const t2 = (num, ...rest)=>{
+  console.log('num = ',num)
+  console.log('rest = ',rest)
+}
 
-site.showHeaders();
+t1(1,2,3,4);
+t2(22,4,8,5);
+
+//sum, которая принимает неограниченное кол-во пареметров
