@@ -1,13 +1,34 @@
 'use strict';
 
-const number = new Number(10);
-console.dir(number);
-console.dir(123123.456789.toFixed(2));
+const userName = 'Elon';
+const str = 'tO    BE    NoT    TO     Be';
 
-const num = Number(123123.456789.toFixed(2));
-console.log(num);
+/*
+функция, которая приводит строку к такому кейсу
+'To Be Or Not To Be'
+
+*/
 
 
-let num2 = 12.123456;//объектом-обёрткой через конструктор Number()
-//num2 = num2.toFixed(2);
-console.dir(num2);
+function toCapitalizeCase(str){
+  const arrWords = str.split(' ');
+  const arrWordsUp = arrWords.map((word)=>{
+    if(word){
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    }
+  });
+  const newStr = arrWordsUp.join(' ')
+  return newStr;
+}
+
+console.log(toCapitalizeCase(str))
+
+function toCapitalizeCase2(str){
+  return  str.split(' ')
+              .map((word)=>{
+                if(word){
+                  return word[0].toUpperCase() + word.substring(1).toLowerCase();
+                }
+              })
+              .join(' ');
+}
