@@ -1,23 +1,18 @@
 'use strict';
-//2**5 = 2* (2**4) = 2*2*  2**3
-const power = (num, exp)=>{
-  if(exp===1){
-    return num;
-  }
-  return num * power(num, exp-1);
+
+const boolean = new Boolean(null);
+console.log(boolean)//object
+
+if(boolean.valueOf()){
+  console.log('true')
+}else{
+  console.log('false')
 }
 
-power(2,3);
-
-
-const factorial = (num)=>{
-  if(num===0){
-    return 1;
-  }
-  return  num * factorial(num-1);
+const str = '';
+if(Boolean(str)){
+  console.log(Boolean(str))
+}else{
+  console.log('false')
 }
-
-factorial(4);
-
-
 
