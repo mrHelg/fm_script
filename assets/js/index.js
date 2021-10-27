@@ -17,12 +17,17 @@ function updateView() {
 }
 updateView();
 
+
+const btnSliderHandler = (direction = 'next') = 
+
 nextButton.addEventListener('click', () => {
-  slider.currentIndex = slider.next();
+  slider.currentIndex = slider.nextIndex;
   updateView();
 });
 
 prevButton.addEventListener('click', () => {
-  slider.currentIndex = slider.prev();
+  slider.currentIndex = slider.prevIndex;
   updateView();
 });
+
+

@@ -24,11 +24,11 @@ class Slider {
     return this._images[this._currentIndex];
   }
 
-  next() {
+  get nextIndex() {
     return (this._currentIndex + 1) % this._images.length;
   }
 
-  prev() {
+  get prevIndex() {
     return (this._currentIndex - 1 + this._images.length) % this._images.length;
   }
 }
