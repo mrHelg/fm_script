@@ -1,21 +1,12 @@
 'use strict'
 
-const [openBtn, closeBtn] = document.getElementsByTagName('button');
+const root = document.getElementById('root');
+const btns = document.getElementsByTagName('button');
 
-const switchInnerText = ()=>{
-
-
-  const text = closeBtn.textContent;
-  closeBtn.textContent = openBtn.textContent;
-  openBtn.textContent = text;
+const changeRootBackground = ({target:{dataset:{color}, parentElement: parent}}) => {
+  parent.style.background = color;
 }
 
-const clickHandler = ({target})=>{
-  console.dir(target);
+for (const btn of btns) {
+  btn.addEventListener('click', changeRootBackground);
 }
-
-openBtn.addEventListener('mouseenter', switchInnerText);
-closeBtn.addEventListener('mouseenter', switchInnerText);
-
-openBtn.addEventListener('click', clickHandler)
-closeBtn.addEventListener('click', clickHandler)
