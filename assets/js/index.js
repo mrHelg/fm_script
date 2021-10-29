@@ -31,4 +31,4 @@ function createActorCard(actor){
   return card;
 }
 
-cardsContainer.append(...htmlElements);
+// cardsContainer.append(...htmlElements);
