@@ -1,36 +1,34 @@
-// 'use strict';
+'use strict';
 
-// const imagesDB = [
-//   'https://previews.123rf.com/images/boligolovag/boligolovag2002/boligolovag200200560/140502050-aerial-wide-angle-panorama-of-zell-am-see-and-kaprun-tourist-resort-with-sunny-alp-mountain-summits-.jpg',
-//   'https://images.vivino.com/thumbs/87V1aok6Scu9tnTHm7_OuA_pb_x600.png',
-//   'https://img.cliparto.com/pic/xl/170570/3005382-square-seamless-blue-texture.jpg',
-// ];
+const cardsContainer = document.getElementById('cardsContainer');
 
-// // const slider = new Slider(imagesDB);
-// const img = document.querySelector('.slide>img');
-// const [prevButton, nextButton] = document.querySelectorAll(
-//   '.slider-container>button'
-// );
+const htmlElements = actors.map((actor) => createActorCard(actor));
 
-// function updateView() {
-//   img.setAttribute('src', slider.currentSlide);
-// }
-// updateView();
+function createActorCard(actor){
+  const card = document.createElement('li');
+  card.classList.add('cardWrapper');
+  
+  const container = document.createElement('article');container.classList.add('cardContainer');
+  
+  const img = document.createElement('img');
+  img.classList.add('cardImage');
+  img.setAttribute('src', actor.photo);
+  img.setAttribute('alt', actor.name);
+  
+  const name = document.createElement('h2');
+  name.classList.add('cardName');
+  name.append(document.createTextNode(actor.name));
+  // name.textContent = actor.name;
 
+  const description = document.createElement('p');
+  description.classList.add('cardDescription');
+  // description.append(document.createTextNode(actor.birthdate));
+  description.textContent = actor.birthdate;
 
-// // const btnSliderHandler = (direction = 'next') = 
+  container.append(img, name, description);
+  card.appendChild(container);
 
-// nextButton.addEventListener('click', () => {
-//   slider.currentIndex = slider.nextIndex;
-//   updateView();
-// });
+  return card;
+}
 
-// prevButton.addEventListener('click', () => {
-//   slider.currentIndex = slider.prevIndex;
-//   updateView();
-// });
-
-
-
-
-
+cardsContainer.append(...htmlElements);
